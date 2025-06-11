@@ -3,54 +3,38 @@ Type: Package
 Title: Parametric Bootstrap Joint Testing Procedures for Neuroimaging
 Version: 0.1.7
 Date: 2022
-Authors@R: c(person("Simon", "Vandekar", email="simon.vandekar@vanderbilt.edu", role=c('aut', 'cre')),
-             person("Shawn", "Garbett", email= "shawn.garbett@vumc.org", role=c('aut')),
-             person("Jiajing", "Niu", email="", role=c('aut'))) 
-Description: These parametric bootstrap joint (PBJ) inference procedures are designed for the analysis of neuroimaging data. The statistical tools
-    are more generally applicable, but this package is designed to allow input
-    and output data for (Neuroimaging Informatics Technology Initiative) NIfTI images. The PBJ tools are designed for voxel-wise
-    and cluster-extent hypothesis testing methods and include semi-PBJ (sPBJ)
-    inference that is robust to variance misspecification using an estimating
-    equations approach. For details, see Vandekar, Simon N., Satterthwaite, Theodore D.,
-    Xia, Cedric H., Ruparel, Kosha, Gur, Ruben C., Gur, Raquel E., Shinohara,
-    Russell T. 2019. "Robust Spatial Extent Inference with a Semiparametric
-    Bootstrap Joint Testing Procedure". Biometrics. (in press) and Vandekar, Simon N.,
-    Satterthwaite, Theodore D. and Rosen, Adon and Ciric, Rastko and Roalf, David
-    R. and Ruparel, Kosha and Gur, Ruben C. and Gur, Raquel E. and Shinohara,
-    Russell T.. 2018. "Faster family-wise error control for neuroimaging with a
-    parametric bootstrap". Biostatistics. 19(4):497-513. 
+Authors@R: c(person("Simon", "Vandekar",
+        email="simon.vandekar@vanderbilt.edu", role=c('aut', 'cre')),
+        person("Shawn", "Garbett", email= "shawn.garbett@vumc.org",
+        role=c('aut')), person("Jiajing", "Niu", email="",
+        role=c('aut')))
+Description: These parametric bootstrap joint (PBJ) inference
+        procedures are designed for the analysis of neuroimaging data.
+        The statistical tools are more generally applicable, but this
+        package is designed to allow input and output data for
+        (Neuroimaging Informatics Technology Initiative) NIfTI images.
+        The PBJ tools are designed for voxel-wise and cluster-extent
+        hypothesis testing methods and include semi-PBJ (sPBJ)
+        inference that is robust to variance misspecification using an
+        estimating equations approach. For details, see Vandekar, Simon
+        N., Satterthwaite, Theodore D., Xia, Cedric H., Ruparel, Kosha,
+        Gur, Ruben C., Gur, Raquel E., Shinohara, Russell T. 2019.
+        "Robust Spatial Extent Inference with a Semiparametric
+        Bootstrap Joint Testing Procedure". Biometrics. (in press) and
+        Vandekar, Simon N., Satterthwaite, Theodore D. and Rosen, Adon
+        and Ciric, Rastko and Roalf, David R. and Ruparel, Kosha and
+        Gur, Ruben C. and Gur, Raquel E. and Shinohara, Russell T..
+        2018. "Faster family-wise error control for neuroimaging with a
+        parametric bootstrap". Biostatistics. 19(4):497-513.
 Encoding: UTF-8
 License: GPL-3
 LazyData: true
 Depends: R (>= 3.3)
-Collate:
-    'addSignal.R'
-    'cluster_functions.R'
-    'functions.R'
-    'getDesign.R'
-    'getPvalues.R'
-    'lmPBJ.R'
-    'niftiImage.R'
-    'palm.R'
-    'statmap.R'
-    'pbj.R'
-    'pbjBoot.R'
-    'pbjInference.R'
-    'resave.R'
-Imports:
-  callr,
-  PDQutils,
-  emmeans,
-  mmand,
-  methods,
-  oro.nifti,
-  parallel,
-  pTFCE,
-  RESI,
-  RNifti,
-  scales,
-  sandwich,
-  utils
+Collate: 'addSignal.R' 'cluster_functions.R' 'functions.R'
+        'getDesign.R' 'getPvalues.R' 'lmPBJ.R' 'niftiImage.R' 'palm.R'
+        'statmap.R' 'pbj.R' 'pbjBoot.R' 'pbjInference.R' 'resave.R'
+Imports: callr, PDQutils, emmeans, mmand, methods, oro.nifti, parallel,
+        pTFCE, RESI, RNifti, scales, sandwich, utils
 RoxygenNote: 7.3.2
 Suggests: 
     fslr,
@@ -61,8 +45,15 @@ Suggests:
     rmarkdown,
     R.rsp,
     sandwich,
-    testthat
-Remotes:
-  simonvandekar/pain21,
-  spisakt/pTFCE
+    testthat,
+    covr
 VignetteBuilder: R.rsp
+Repository: Neuroconductor-Devel
+Remotes:  
+    spisakt/pTFCE,
+    neuroconductor-devel/RNifti@b01b7073b6d5d9ff6252ccd004da27d6c2d7cb56,
+    neuroconductor-devel/mmand@109a35795781dee92804567236bcca5ba8903f08,
+    neuroconductor-devel/pain21@1e65d15feb1ec8673b5e6cd983f1cbaf5d772a30,
+    neuroconductor-devel/oro.nifti@517ce5312094bf1ecee49bd09024769d3e5d2daa,
+    neuroconductor-devel/fslr@22c50545a095a3a02deec976b23fa6a349e717ac
+biocViews: 
